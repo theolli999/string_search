@@ -13,9 +13,7 @@ public class string_search {
         fileName = scan.next();
         System.out.println("Enter searchword: ");
         String search = scan.next();
-        if (!fileName.contains("txt")) {
-            fileName += ".txt";
-        }
+        scan.close();
         System.out.println(fileName);
         Scanner fileReader;
         try {
@@ -26,7 +24,6 @@ public class string_search {
                     System.out.println(line);
                 }
             }
-            scan.close();
             fileReader.close();
         } catch (FileNotFoundException e) {
             System.out.println("Invalid file name!");
